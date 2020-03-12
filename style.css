@@ -1,0 +1,161 @@
+body{
+    padding: 0%;
+    margin:0%;
+    box-sizing: content-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#696969;
+    background: rgb(240, 240, 240);
+}
+/*header*/
+#header{
+    padding: 1rem;
+}
+/*logo*/
+.logo{
+    text-align: center;
+    padding: 1rem;
+}
+.logo a{
+    text-decoration: none;
+    display:inline-block;
+    background:#FF4486;
+    color: #ffffff;
+    font-weight: bold;
+    padding: 0.5rem;
+    font-size: 30px;
+    border-radius: 4px;
+}
+.logo span{
+    font-weight: bold;
+}
+/*bannner*/
+.banner{
+    position: relative;
+    background: #ffffff;
+    padding: 1rem;
+    text-align: center;
+    margin: 0 5%;
+
+}
+.banner h2{
+    color: #444444;
+    font-size: 2em;
+    letter-spacing: -2px;
+}
+.banner p{
+    font-size: 1.5em;
+}
+#btn{
+    display:block;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border-radius: 5px;
+}
+.btn-1{
+    background:#0090c5;
+    color: #ffffff;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+.btn-2{
+    background:rgba(0, 0, 0, 0.05);
+    color: #444444;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+/*card*/
+#main ul{
+    padding: 1rem;
+    list-style: none;
+}
+#main li{
+    text-align: center;
+    background: #ffffff;
+    padding: 1rem;
+}
+#main li,img{
+    border-radius: 5px;
+    background-image: none;
+}
+/*section-a*/
+#section-a,
+#section-b{
+    padding: 2.5rem;
+    background: #ffffff;
+}
+/*section c*/
+#section-c{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+.linkbox{
+    padding: 1rem 2rem;
+}
+.linkbox ul{
+   list-style: none;
+   border-bottom: 1px solid gray;
+   padding: 0;
+}
+.linkbox li,a{
+    color: #696969;
+}
+.linkbox li{
+    padding-bottom:10px;
+    min-width: 300px;
+}
+.icon li{
+    display: inline;
+}
+/*footer*/
+#footer {
+    padding: 1rem;
+    text-align: left;
+}
+
+
+
+/*media quier*/
+@media(min-width:700px){
+    .banner h2{
+        color: #444444;
+        font-size: 3em;
+        letter-spacing: -2px;
+    }
+    .banner p{
+        font-size: 2em;
+    }
+    #btn{
+        display:block;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1.5rem 3rem;
+        border-radius: 5px;
+    }
+    #footer {
+        text-align: center;   
+    }
+    .linkbox ul{
+       border: none;
+     }
+}
+@media(min-width:900px){
+    .banner h2,
+    .banner p{
+        text-align: left;
+        padding-left: 1.5rem;
+        max-width: 50%;
+    }
+    #btn{
+        min-width: 20%;
+    }
+    .buttons{
+        position: absolute;
+        right: 10%;
+        top:20%;
+    }
+    
+}
