@@ -4,16 +4,16 @@ body{
     box-sizing: content-box;
     font-family: Arial, Helvetica, sans-serif;
     color:#696969;
+    height: 100%;
     background: rgb(240, 240, 240);
 }
 /*header*/
 #header{
-    padding: 1rem;
+    padding:1.5rem;
 }
 /*logo*/
 .logo{
-    text-align: center;
-    padding: 1rem;
+    margin: 0 10%;
 }
 .logo a{
     text-decoration: none;
@@ -24,36 +24,41 @@ body{
     padding: 0.5rem;
     font-size: 30px;
     border-radius: 4px;
+    margin: 0;
 }
 .logo span{
     font-weight: bold;
 }
 /*bannner*/
 .banner{
-    position: relative;
+    padding: 2rem;
     background: #ffffff;
-    padding: 1rem;
-    text-align: center;
-    margin: 0 5%;
-
+    margin: 10px 10% 10px 10%;
+    border-radius: 4px;
 }
+
 .banner h2{
     color: #444444;
-    font-size: 2em;
-    letter-spacing: -2px;
+    font-size: 3em;
 }
 .banner p{
-    font-size: 1.5em;
+    width: 70%;
+    font-size: 2em;
+
+}
+.banner-buttons{
 }
 #btn{
-    display:block;
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
     padding: 1rem 3rem;
-    border-radius: 5px;
+    border-radius: 4px;
+    border: none;
+    
 }
 .btn-1{
+    
     background:#0090c5;
     color: #ffffff;
     margin: 0.5rem 0;
@@ -65,60 +70,10 @@ body{
     margin: 0.5rem 0;
     text-align: center;
 }
-/*card*/
-#main ul{
-    padding: 1rem;
-    list-style: none;
-}
-#main li{
-    text-align: center;
-    background: #ffffff;
-    padding: 1rem;
-}
-#main li,img{
-    border-radius: 5px;
-    background-image: none;
-}
-/*section-a*/
-#section-a,
-#section-b{
-    padding: 2.5rem;
-    background: #ffffff;
-}
-/*section c*/
-#section-c{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-.linkbox{
-    padding: 1rem 2rem;
-}
-.linkbox ul{
-   list-style: none;
-   border-bottom: 1px solid gray;
-   padding: 0;
-}
-.linkbox li,a{
-    color: #696969;
-}
-.linkbox li{
-    padding-bottom:10px;
-    min-width: 300px;
-}
-.icon li{
-    display: inline;
-}
-/*footer*/
-#footer {
-    padding: 1rem;
-    text-align: left;
-}
-
 
 
 /*media quier*/
-@media(min-width:700px){
+/*@media(min-width:700px){
     .banner h2{
         color: #444444;
         font-size: 3em;
@@ -158,4 +113,4 @@ body{
         top:20%;
     }
     
-}
+}*/
