@@ -6,6 +6,7 @@ body{
     color:#696969;
     height: 100%;
     background: rgb(240, 240, 240);
+    min-width:150px;
 }
 /*header*/
 #header{
@@ -136,13 +137,28 @@ footer{
         grid-template-columns: auto;
         grid-template-rows: 70% 30%;
     }
+    div#cards{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto; 
+    }
+    .logo{
+        text-align: center;
+        margin-bottom: 15px ;
+    }
+
 }
-@media(max-width:600px){
-    .banner p{
-        font-size: 1.5em;
-        
+@media(max-width: 620px){
+    
+    .banner{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
     }
-    .banner h2{
-        font-size: 2.5em;
+    div#cards{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto; 
     }
+}
+@media(max-width: 500px){
+    
 }
