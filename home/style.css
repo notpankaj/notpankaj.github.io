@@ -14,7 +14,7 @@ body{
 }
 /*logo*/
 .logo{
-    margin: 0 10%;
+    margin:10px 5%;
 }
 .logo a{
     text-decoration: none;
@@ -32,48 +32,46 @@ body{
 }
 /*bannner*/
 .banner{
-    display: grid;
-    grid-template-columns: 70% 30%;
+    display: flex;
+    justify-content: center;
     padding:0 2rem;
     background: #ffffff;
-    margin: 10px 10% 10px 10%;
+    margin:10px 5%;
     border-radius: 4px;
 
 }
 .banner-text{
     margin:5%;
+    
 }
 .banner h3{
     color: #444444;
     font-size: 3em;
 }
 .banner p{
-   
     font-size: 2em;
-
 }
 .banner-buttons{
-    display: grid;
-    align-content: center;
-    grid-template-rows: 50%;
-    margin: 0 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 #btn{
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
-
+    min-width: 220px;
     border-radius: 4px;
     border: none;
     height: 65px;
-    
 }
 .btn-1{
     
     background:#0090c5;
     color: #ffffff;
     text-align: center;
+
 
 }
 .btn-2{
@@ -119,6 +117,7 @@ div#pro-card span{
     font-weight: bold;
     color: rgba(0, 0, 0, 0.7);
     box-shadow: 10px black;
+    min-height: 50px;
 }
 div#pro-card p{
     font-size: 1rem;
@@ -132,11 +131,6 @@ footer{
 }
 /*media quier*/
 @media(max-width:940px){
-    .banner{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: 70% 30%;
-    }
     div#cards{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto; 
@@ -145,20 +139,73 @@ footer{
         text-align: center;
         margin-bottom: 15px ;
     }
+    .banner{
+        flex-direction: column;
+    }
+    #btn{
+        margin: 2% 0;
+    }
+    div#section-dis p {
+       margin: 0 5%;
+    }
 
 }
-@media(max-width: 620px){
+@media(max-width: 640px){
     
-    .banner{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
     div#cards{
         grid-template-columns: 1fr;
         grid-template-rows: auto; 
     }
+    .banner h3{
+        font-size: 2.5em;
+    }
+    .banner p{
+        font-size: 1.5em;
+    }
 }
-@media(max-width: 500px){
+@media(max-width: 450px){
+    #btn{
+        font-size: 1rem;
+        width: auto;
+        height: 45px;
+        min-width: fit-content;
+    }
+    .banner{
+        margin: ;
+    }
+    .banner h3{
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+    .banner p{
+        font-size: 1em;
+    }
+    div#section-dis span {
+        font-size: 2rem;
+    }
+    div#section-dis p {
+        font-size: 1.2rem;
+    }
+}
+@media(max-width: 280px){
     
+    #btn{
+        font-size: 0.5rem;
+        min-width: fit-content;
+        height: 25px;   
+    }
+    .logo a {
+        font-size: 20px;
+    }
+    .banner h3{
+        font-size: 1em;
+        margin: 2px 0;
+    }
+    .banner p{
+        font-size: 0.6em;
+        margin:4px 0;
+    }
+    div#cards{
+        margin:0;
+    }
 }
