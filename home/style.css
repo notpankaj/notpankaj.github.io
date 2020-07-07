@@ -33,7 +33,7 @@ body{
 .banner{
     display: grid;
     grid-template-columns: 70% 30%;
-    padding: 2rem;
+    padding:0 2rem;
     background: #ffffff;
     margin: 10px 10% 10px 10%;
     border-radius: 4px;
@@ -42,7 +42,7 @@ body{
 .banner-text{
     margin:5%;
 }
-.banner h2{
+.banner h3{
     color: #444444;
     font-size: 3em;
 }
@@ -81,7 +81,54 @@ body{
     text-align: center;
 }
 
+/*section-a*/
+/*discription*/
+div#section-a{
+    background-color: #fff;
+}
+div#section-dis{
+    text-align: center;
+    padding: 30px 0;
+}
+div#section-dis span {
+    font-size: 3rem;
+    font-weight: bold;
+}
+div#section-dis p {
+    font-size: 1.5rem;
+}
+/*cards*/
 
+div#cards{
+    margin: 0 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+div#pro-card{
+    display: flex;
+    flex-direction: column;
+    background:rgba(0, 0, 0, 0.03);
+    border-radius: 3px;
+    margin: 20px 30px;
+    padding: 5%;
+}
+div#pro-card span{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgba(0, 0, 0, 0.7);
+    box-shadow: 10px black;
+}
+div#pro-card p{
+    font-size: 1rem;
+}
+
+
+
+
+footer{
+    height: 50px;
+}
 /*media quier*/
 @media(max-width:940px){
     .banner{
