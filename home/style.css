@@ -1,215 +1,239 @@
-body{
-    padding: 0%;
-    margin:0%;
-    box-sizing: content-box;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color:#696969;
-    height: 100%;
-    background: rgb(240, 240, 240);
-    min-width:150px;
-    font-size: 16px;
-}
-/*header*/
-header{
-margin:3% 0;
-}
-/*logo*/
-#logo {
-    display: inline-flex;
-    margin: 0 10%;
-}
-#logo span{
-    display: block;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: rgb(255, 47, 117);
-    align-self: center;
-    padding: 10px;
-    border-radius: 4px;
-}
-#logo p{
-    font-size: 1.5rem;
-    font-style: italic;
-    align-self: center;
-    margin: 0;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
-
-/*bannner*/
-#banner{
-    display: flex;
-    background: #ffffff;
-    border-radius: 4px;
-    margin: 5% 10%;
-    justify-content: center;
-    padding: 0 5%;
-}
-.banner-text{
-    margin: 5%;
-}
-#banner h1{
-    color: #444444;
-    font-size: 4rem;
-    margin: 0;
-}
-#banner p{
-    font-size:2.5rem;
-    margin: 0;
-}
-.banner-buttons{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    margin: 0 5%;
-    
+body {
+  background: #fcf6ea;
+  font-family: Roboto;
 }
 
-#btn{
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: bold;
-    min-width: 220px;
-    border-radius: 4px;
-    border: none;
-    height: 65px;
-}
-.btn-1{
-    
-    background:#0090c5;
-    color: #ffffff;
-    text-align: center;
-
-
-}
-.btn-2{
-    background:rgba(0, 0, 0, 0.05);
-    color: #444444;
-    text-align: center;
+header {
+  padding: 3% 0px;
 }
 
-/*section-a*/
-/*discription*/
-div#section-a{
-    background-color: #fff;
+header #logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 10%;
 }
-div#section-dis{
-    text-align: center;
-    padding: 30px 0;
-}
-div#section-dis span {
-    font-size: 3rem;
-    font-weight: bold;
-}
-div#section-dis p {
-    font-size: 1.5rem;
-}
-/*cards*/
 
-div#cards{
-    margin: 0 10%;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    
+header #logo span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: #ff2f75;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 10px;
+  border-radius: 4px;
 }
-div#pro-card{
-    display: flex;
-    flex-direction: column;
-    background:rgba(0, 0, 0, 0.03);
-    border-radius: 3px;
-    margin: 20px 30px;
-    padding: 5%;
-}
-div#pro-card span{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: rgba(0, 0, 0, 0.7);
-    box-shadow: 10px black;
-    min-height: 50px;
-}
-div#pro-card p{
-    font-size: 1rem;
-}
-footer{
-    height: 50px;
-}
-/*media quier*/
-@media(max-width:1000px){
-    div#cards{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto; 
-    }
-    #logo{
-        text-align: center;
-        margin-bottom: 15px ;
-    }
-    #banner{
-        flex-direction: column;
-    }
-    .banner-buttons{
-        padding-bottom: 10px;
-    }
-    #btn{
-        margin: 2% 0;
-    }
-    div#section-dis p {
-       margin: 0 5%;
-    }
 
+header #logo p {
+  font-size: 1.5rem;
+  font-style: italic;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0;
 }
-@media(max-width: 640px){
-    
-    div#cards{
-        grid-template-columns: 1fr;
-        grid-template-rows: auto; 
-    }
-    #banner h1{
-        font-size: 2.5em;
-    }
-    #banner p{
-        font-size: 1.5em;
-    }
+
+#banner {
+  background: #ffffff;
+  margin: 0 10%;
+  padding: 30px 0;
+  border-radius: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 5px;
+      grid-template-areas: " GREAT " " NAME " " INFO " " BTNS ";
 }
-@media(max-width: 450px){
-    #btn{
-        font-size: 1rem;
-        width: auto;
-        height: 45px;
-        min-width: fit-content;
-    }
-    #banner h1{
-        font-size: 1.5em;
-        margin: 5px 0;
-    }
-    #banner p{
-        font-size: 1em;
-    }
-    div#section-dis span {
-        font-size: 2rem;
-    }
-    div#section-dis p {
-        font-size: 1.2rem;
-    }
+
+#banner h1 {
+  color: #444444;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: GREAT;
 }
-@media(max-width: 280px){
-    
-    #btn{
-        font-size: 0.5rem;
-        min-width: fit-content;
-        height: 25px;   
-    }
-    #logo span {
-        font-size: 20px;
-    }
-    #banner h1{
-        font-size: 1em;
-        margin: 2px 0;
-    }
-    #banner p{
-        font-size: 0.6em;
-        margin:4px 0;
-    }
-    div#cards{
-        margin:0;
-    }
+
+#banner .name {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: NAME;
 }
+
+#banner .info {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: INFO;
+  font-size: 1rem;
+  margin: 0 40px;
+}
+
+#banner .banner-buttons {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: BTNS;
+}
+
+.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.name span {
+  position: relative;
+  left: 25px;
+  text-transform: uppercase;
+  width: 40px;
+  height: 40px;
+  font-size: 2rem;
+  border-radius: 50%;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 2px 15px 2px rgba(206, 89, 55, 0);
+  cursor: pointer;
+  -webkit-filter: contrast(110%);
+          filter: contrast(110%);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.name span:hover {
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.name span:first-child {
+  background: rgba(212, 197, 166, 0.6);
+  -webkit-transform: translateX(10);
+          transform: translateX(10);
+}
+
+.name span:nth-child(2) {
+  background: rgba(94, 162, 137, 0.6);
+  -webkit-transform: translateX(-10px);
+          transform: translateX(-10px);
+}
+
+.name span:nth-child(3) {
+  background: rgba(252, 195, 67, 0.6);
+  -webkit-transform: translateX(-20px);
+          transform: translateX(-20px);
+}
+
+.name span:nth-child(4) {
+  background: rgba(255, 135, 15, 0.6);
+  -webkit-transform: translateX(-30px);
+          transform: translateX(-30px);
+}
+
+.name span:nth-child(5) {
+  background: rgba(239, 147, 126, 0.6);
+  -webkit-transform: translateX(-40px);
+          transform: translateX(-40px);
+}
+
+.name span:last-child {
+  background: rgba(197, 96, 220, 0.6);
+  -webkit-transform: translateX(-50px);
+          transform: translateX(-50px);
+}
+
+.banner-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.banner-buttons button {
+  text-decoration: none;
+  border-radius: 4px;
+  border: #e30075;
+  font-size: 1.3rem;
+  margin: 5px 30px;
+  background: #0090c5;
+  color: #ffffff;
+  padding: 6px 10px;
+  font-weight: 600;
+}
+
+.banner-buttons .btn-2 {
+  background: rgba(0, 0, 0, 0.05);
+  color: #444444;
+  text-align: center;
+}
+
+#projects {
+  background-color: #fff;
+  margin-top: 50px;
+  text-align: center;
+}
+
+#projects .section-dis {
+  text-align: center;
+  padding: 30px 0;
+}
+
+#projects .section-dis span {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#projects .section-dis p {
+  font-size: 1.5rem;
+}
+
+#cards {
+  margin: 0 10%;
+}
+
+div#pro-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 3px;
+  margin: 20px 30px;
+  padding: 5%;
+}
+
+div#pro-card span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 10px black;
+          box-shadow: 10px black;
+  min-height: 50px;
+}
+
+div#pro-card p {
+  font-size: 1rem;
+}
+/*# sourceMappingURL=style.css.map */

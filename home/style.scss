@@ -1,0 +1,39 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fcf6ea;
+    font-family: Roboto ;
+}
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+//============= HEADER ===============
+  header {
+      padding: 3% 0px;
+  #logo {
+    display: flex;
+    margin: 0 10%;
+  }
+  #logo span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: rgb(255, 47, 117);
+    align-self: center;
+    padding: 10px;
+    border-radius: 4px;
+  }
+  #logo p {
+    font-size: 1.5rem;
+    font-style: italic;
+    align-self: center;
+    margin: 0;
+  }
+}
+//============= BANNER ===============
+@import "./Styles/banner";
+//============= PROJECTS ===============
+@import "./Styles/projects";
