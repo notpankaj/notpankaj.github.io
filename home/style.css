@@ -11,8 +11,16 @@ body {
   font-family: Roboto;
 }
 
+#wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 header {
   padding: 3% 0px;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 
 header #logo {
@@ -24,7 +32,7 @@ header #logo {
 
 header #logo span {
   display: block;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
   color: #fff;
   background-color: #ff2f75;
@@ -51,37 +59,53 @@ header #logo p {
   border-radius: 5px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   text-align: center;
+  -webkit-box-shadow: 5px 6px 20px 0px rgba(92, 92, 92, 0.1);
+          box-shadow: 5px 6px 20px 0px rgba(92, 92, 92, 0.1);
   display: -ms-grid;
   display: grid;
   grid-gap: 5px;
-      grid-template-areas: " GREAT " " NAME " " INFO " " BTNS ";
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
 }
 
 #banner h1 {
   color: #444444;
-  -ms-grid-row: 1;
   -ms-grid-column: 1;
-  grid-area: GREAT;
+  grid-column: 1/1;
+  -ms-grid-row: 1;
+  grid-row: 1/1;
+  margin-bottom: 5px;
 }
 
 #banner .name {
-  -ms-grid-row: 2;
   -ms-grid-column: 1;
-  grid-area: NAME;
+  grid-column: 1/1;
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
 }
 
 #banner .info {
-  -ms-grid-row: 3;
   -ms-grid-column: 1;
-  grid-area: INFO;
-  font-size: 1rem;
-  margin: 0 40px;
+  grid-column: 1/1;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 1;
+  grid-row: 3/4;
+  font-size: 14px;
+  margin: 5px 40px;
 }
 
 #banner .banner-buttons {
-  -ms-grid-row: 4;
   -ms-grid-column: 1;
-  grid-area: BTNS;
+  grid-column: 1/1;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4/5;
 }
 
 .name {
@@ -184,6 +208,113 @@ header #logo p {
   background: rgba(0, 0, 0, 0.05);
   color: #444444;
   text-align: center;
+}
+
+@media (min-width: 550px) {
+  #banner h1 {
+    font-size: 2.5rem;
+  }
+  #banner .info {
+    font-size: 18px;
+  }
+  .name span {
+    width: 60px;
+    height: 60px;
+    font-size: 2.5rem;
+  }
+  .name span:first-child {
+    -webkit-transform: translateX(5px);
+            transform: translateX(5px);
+  }
+  .name span:nth-child(2) {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  .name span:nth-child(3) {
+    -webkit-transform: translateX(-22px);
+            transform: translateX(-22px);
+  }
+  .name span:nth-child(4) {
+    -webkit-transform: translateX(-32px);
+            transform: translateX(-32px);
+  }
+  .name span:nth-child(5) {
+    -webkit-transform: translateX(-45px);
+            transform: translateX(-45px);
+  }
+  .name span:last-child {
+    -webkit-transform: translateX(-60px);
+            transform: translateX(-60px);
+  }
+  button {
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 760px) {
+  .info {
+    padding: 0px 5%;
+  }
+  .banner-buttons {
+    padding: 0px 5%;
+  }
+}
+
+@media (min-width: 900px) {
+  #banner {
+    display: -ms-grid;
+    display: grid;
+    grid-gap: 0;
+    -ms-grid-columns: 60% 40%;
+        grid-template-columns: 60% 40%;
+    -ms-grid-rows: 50px 80px auto;
+        grid-template-rows: 50px 80px auto;
+    padding: 15px 3%;
+  }
+  #banner h1 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    text-align: left;
+    margin-left: 40px;
+  }
+  #banner .name {
+    -ms-grid-row: 2;
+    -ms-grid-row-span: 1;
+    grid-row: 2/3;
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+  #banner .info {
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 1;
+    grid-row: 3/4;
+    text-align: left;
+    padding: 0;
+    margin-right: 10px;
+  }
+  #banner .banner-buttons {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-row: 1/4;
+  }
+  .banner-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .banner-buttons button {
+    font-size: 1.5rem;
+    height: 60px;
+  }
 }
 
 #projects {
