@@ -1,124 +1,196 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Welcome</title>
-	<link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet"/>
-</head>
-<body>
-	<style>
-		html,
-body {
-  height: 100%;
-}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./Styles/style.css" />
+	 <link rel="preconnect" href="https://fonts.gstatic.com">
+  </head>  
 
-body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #222;
-}
-
-#gsTitle {
-  position: relative;
-  color: #fff;
-  font-size: 108px;
-  font-family: "oswald", sans-serif;
-}
-
-.gsTitle-title {
-  margin: 0;
-  white-space: nowrap;
-}
-
-.gsTitle-color {
-  position: absolute;
-  top: 0;
-  opacity: 0;
-  margin: -.05em 0 0 .05em;
-  color: dodgerblue;
-  mix-blend-mode: darken;
-  transition: .1s;
-  transition-property: opacity, margin;
-}
-
-.gsTitle-b {
-  margin: .05em 0 0 -.05em;
-  color: tomato;
-  mix-blend-mode: color-burn;
-}
-
-.gsTitle-glitched .gsTitle-color {
-  opacity: .4;
-}
-</style>
-<div id="gsTitle">
-	<div class="gsTitle-title"></div>
-	<div class="gsTitle-title gsTitle-color gsTitle-a"></div>
-	<div class="gsTitle-title gsTitle-color gsTitle-b"></div>
-</div>
-
-<script>
+  <body>
+    <main id="wrapper">
+	<nav class="big-nav">
+	<ul class="nav-list ">
+		<li class="nav-listitem logo">PANKAJ </li>
+		<li class="nav-listitem"><a  class="nav-link" data-id="projects">work</a></li>
+		<li class="nav-listitem"><a   class="nav-link"  data-id="about">about</a></li>
+		<li class="nav-listitem"><a  class="nav-link"  data-id="contact"  >contact</a></li>
+				<li class="nav-listitem"><a  class="nav-link"  href="./assets/cv.pdf" >Resume</a></li>
+	</ul>
+	</nav>
 	
-const gsTitle = {
-	init() {
-		this._root = document.querySelector( "#gsTitle" );
-		this._titles = this._root.querySelectorAll( ".gsTitle-title" );
-		this._frame = this._frame.bind( this );
-		this.setTexts( [
-			"Not Pankaj !",
-			"ɾɐʞuɐԀ ʇoN .",
-			"ռօȶ քǟռӄǟʝ ¡",
-			"₦Ø₮ ₱₳₦₭₳J ¡",
-			"刀のｲ ｱﾑ刀ズﾑﾌ ¡",
+	<header>
+	</header>
 
-		] );
-	},
-	on() {
-		if ( !this._frameId ) {
-			this._frame();
-		}
-	},
-	off() {
-		clearTimeout( this._frameId );
-		this._textContent( this._text );
-		delete this._frameId;
-	},
-	setTexts( [ text, ...alt ] ) {
-		this._text = text;
-		this._textAlt = alt;
-	},
+<div id="mob">
+		<span>PANKAJ</span>
+			<svg  class="mob-nav-btn" viewBox="0 0 100 80" width="40" height="40">
+			<rect width="100" height="20"></rect>
+			<rect y="30" width="100" height="20"></rect>
+			<rect y="60" width="100" height="20"></rect>
+			</svg>
+</div>
+<ul class="popup hide">
+	<ul class="pop-list">
+	<button class="close-pop">✕</button>
+		<li class="nav-listitem"><a href="#" class="nav-link"  >Home</a></li>
+		<li class="nav-listitem"><a  class="nav-link" data-id="projects">work</a></li>
+		<li class="nav-listitem"><a   class="nav-link"  data-id="about">about</a></li>
+		<li class="nav-listitem"><a  class="nav-link" data-id="contact" >contact</a></li>
+		<li class="nav-listitem"><a  class="nav-link" href="./assets/cv.pdf"  >Resume</a></li>
+	</ul>
+</ul>
 
-	// private:
-	_text: "",
-	_textAlt: [],
-	_rand( n ) {
-		return Math.random() * n | 0;
-	},
-	_textContent( txt ) {
-		this._titles.forEach( el => el.textContent = txt );
-	},
-	_frame() {
-		const txt = Array.from( this._text );
+   
+      <!--banner-->
+      <div id="banner">
+        <!-- <div class="banner-text"> -->
+        <h1>Hi. This is</h1>
+        <div class="name">
+          <span data-color="rgb(212, 197, 166, 0.6);">P</span>
+          <span data-color="rgb(94, 162, 137, 0.6)">a</span>
+          <span data-color="rgb(252, 195, 67, 0.6)">n</span>
+          <span data-color="rgb(255, 135, 15, 0.6)">k</span>
+          <span data-color="rgb(239, 147, 126, 0.6)">a</span>
+          <span data-color="rgb(197, 96, 220, 0.6)">j</span>
+        </div>
+        <p class="info">
+          I'm a web developer based in Chandigarh, India. and im also a good person.
+        </p>
+        <div class="banner-buttons">
+          <button  class="btn-1" data-id="contact">Ok let's go</button>
+          <button  class="btn-2" data-id="about"> More info</button>
+        </div>
+      </div>
 
-		for ( let i = 0; i < 6; ++i ) {
-			const ind = this._rand( this._text.length );
+      <!-- ======================   My Project ===================================== -->
+      <section id="projects">
+       <div class="section-dis">
+          <span>My Project</span>
+          <!-- <p>
+          some selected projects....
+          </p>-->
+        </div> 
+        <!-- project cards  -->
+        <div id="cards">
+			<article class="pro-card">
+				<div class="img-container">
+					<img src="./assets/pro-1.png"/>
+				</div>
+				<div class="pro-dis">
+					<h3>Fb Messenger clone</h3>
+					<p>It's a chat app ,build in React,js and using firebase to store
+					name and there messages in database. when new message was added to database it rerenders the chat without refeshing..</p>
+					<button class="pro-btn"><a href="https://fb-messenger-clone-f05f6.web.app/">view project</a></button>
+				</div>
+			</article>
+			<article class="pro-card">
+				<div class="img-container">
+					<img src="./assets/pro-2.png"/>
+				</div>
+				<div class="pro-dis">
+					<h3>Image Gallery </h3>
+					<p>its a full reaponsive image gallery, which is using
+					ajax and pixels api to fetch photos  and inspired by pintrest. </p>
+					<button class="pro-btn"><a href="https://notpankaj.github.io/app/gallery">view project</a></button>
+				</div>
+			</article>
+			<article class="pro-card">
+				<div class="img-container">
+					<img src="./assets/pro-3.png"/>
+				</div>
+				<div class="pro-dis">
+					<h3>My portfolio </h3>
+					<p>this was the first thing i build in early 2019, and it was so bad ,and decided to rebuild it in april-2021.
+					*what i did* implemented js and fixes scroll bugs , and improve UI inspired by googles material ui</p>
+					<button class="pro-btn" disabled="true">view project</button>
+				</div>
+			</article>
+        </div>
+      </section>
+	  	  <!-- ======================   Contact  ==================================== -->
+	  
+	   <section id="contact"> 
+		 <div class="section-dis">
+          <span>Contact</span>
+        </div> 
+		<article class="contact-box">
+			<div class="contact-item">
+				<span class="contact-title">E-mail </span>
+				<p>iampankaj0409@gmail.com</p>
+			</div>
+			<div class="contact-item">
+				<span class="contact-title">Github</span>
+				<p>notpankaj</p>
+			</div>
+			<div class="contact-item">
+				<span class="contact-title">Ph.no</span>
+				<p>+91 7986674418</p>
+			</div>
+			<div class="contact-item">
+				<span class="contact-title">Resume</span>
+				<p><a href="./assets/cv.pdf">download</a></p>
+			</div>
+		</article>
+		</section>
+	  <!-- ======================   ABOUT  ==================================== -->
+	  
+	  <section id="about"> 
+		 <div class="section-dis">
+          <span>ABOUT</span>
+        </div> 
+		<div class="about-intro">
+		 <div>
+		 <h3>WHO AM I !?</h3>
+		<span>Hello, I'm Pankaj. </span>
+		</div>
+		<img src="./assets/role-model.png"/>
+		</div>
+		<div class="about-info">
+		<p>I'm a Front-End-Developer and recent graduat of B.A IT Programming from SGGS Khalsa Sector-26 Chandigarh, India</p>
+		<p>also self-taught ui/ux designer, i love to gather inspiration. i like to build clean and minimal design as well as my desire to push boundaries.</p>
+		<p>i am currently learning react and looking for internship or intresting job offers in we developement or related feild.</p>
+		</div>
+		<hr/>
+		<article id="skills-section">
+		<div class="skill">
+			<h4> My Skills</h4>
+			<h3>Technology</h3>
+			<ul class="skill-ul">
+				<li>HTML</li>
+				<li>CSS</li>
+				<li>JavaScript</li>
+			</ul>
+			<hr>
+				<h3>Frameworks / Libraries</h3>
+		<ul class="skill-ul">
+				<li>react.js</li>
+				<li> material-ui</li>
+				<li>scss</li>
+				<li>firebase</li>
+				<li>many  more...</li>		
+			</ul>
+			<hr>
+				<h3>Knowledge of </h3>
+			<ul class="skill-ul">
+				<li>API</li>
+				<li>Linux</li>
+				<li>figma</li>
+				<li>git/github</li>
+				<li>ui/ux principles</li>
+				<li>responsive css</li>
+			</ul>
 
-			txt[ ind ] = this._textAlt[ this._rand( this._textAlt.length ) ][ ind ];
-		}
-		this._textContent( txt.join( "" ) );
-		this._root.classList.add( "gsTitle-glitched" );
-		setTimeout( () => {
-			this._textContent( this._text );
-			this._root.classList.remove( "gsTitle-glitched" );
-		}, 50 + Math.random() * 200 );
-		this._frameId = setTimeout( this._frame, 250 + Math.random() * 500 );
-	},
-};
-
-gsTitle.init();
-gsTitle.on();
-
-</script>
-
-</body>
+		</div>
+		</article>
+	  </section>
+	  
+	  
+		
+    </main>
+	<footer><code>mob: +91 - 798667418 </code> <code>email: iampankaj0409@gmail.com</code>
+	</footer>
+  </body>
+  <script src="./Styles/script.js"></script>
 </html>
